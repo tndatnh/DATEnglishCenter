@@ -1,0 +1,336 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Trung tâm Anh ngữ DAT - Nơi học tiếng Anh chất lượng với đội ngũ giảng viên chuyên nghiệp. Học tiếng Anh giao tiếp, luyện thi IELTS, TOEIC, và nhiều khóa học khác tại DAT English Center.">
+    <meta name="keywords" content="trung tâm Anh ngữ, học tiếng Anh, luyện thi IELTS, luyện thi TOEIC, tiếng Anh giao tiếp, học tiếng Anh trực tuyến, trung tâm Anh ngữ chất lượng">
+    <meta name="author" content="DAT English Center">
+    <title>Trung tâm Anh ngữ DAT - Học tiếng Anh hiệu quả</title>
+    <link rel="stylesheet" href="~/Content/style.css">
+    <style>
+        /* Smooth scrolling behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Basic styling for sections */
+        section {
+            padding: 50px 20px;
+            margin: 20px 0;
+        }
+
+        .cta {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+            .cta:hover {
+                background-color: #218838;
+            }
+
+        .intro ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .intro li {
+            margin: 10px 0;
+        }
+
+        .banner img {
+            width: 100%;
+            height: auto;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .section-content {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* CSS cho các ảnh trong mục li */
+        ul li img {
+            width: 100px; /* hoặc chiều rộng mong muốn */
+            height: 100px; /* hoặc chiều cao mong muốn */
+            object-fit: cover; /* giúp ảnh không bị méo */
+            margin-right: 20px; /* khoảng cách giữa ảnh và văn bản */
+            border-radius: 50%; /* nếu bạn muốn ảnh hình tròn */
+        }
+
+        /* Căn chỉnh lại các mục li */
+        ul li {
+            display: flex;
+            align-items: center; /* căn giữa ảnh và văn bản */
+            margin: 20px 0;
+        }
+
+        /* Tăng khoảng cách giữa các li */
+        #courses ul li {
+            width: 45%; /* Thay vì 30% để tạo không gian rộng hơn */
+            margin: 20px;
+            padding: 15px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+        }
+
+         /* Tăng khoảng cách giữa các phần tử bên trong li */
+        #courses ul li h3 {
+         font-size: 1.6rem;
+         margin-bottom: 10px; /* Khoảng cách dưới tiêu đề */
+        }
+
+        #courses ul li p {
+         font-size: 1rem;
+         line-height: 1.5; /* Tăng khoảng cách dòng để văn bản không bị chật */
+         margin-bottom: 10px;
+        }
+
+         /* Cải thiện cách hiển thị cho các đoạn văn và thông tin */
+        #courses ul li strong {
+         font-weight: bold;
+         margin-right: 5px;
+        }
+
+        #courses ul li span {
+         display: block; /* Đặt mỗi từ vào một dòng riêng */
+         margin-bottom: 5px; /* Khoảng cách giữa các từ */
+        }
+
+        /* Căn giữa nút Đăng ký ngay */
+        #courses .cta {
+         display: block;
+         margin: 20px auto; /* Căn giữa theo chiều ngang */
+         text-align: center; /* Căn giữa chữ bên trong */
+        }
+
+        /* Cập nhật phần mẹo học tiếng Anh với hình ảnh */
+        #tips ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+            #tips ul li {
+                margin: 20px;
+                width: 45%;
+                background-color: #f1f1f1;
+                border-radius: 8px;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                padding: 10px;
+            }
+
+                #tips ul li .tip-image {
+                    width: 60px;
+                    height: 60px;
+                    margin-right: 15px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+
+                #tips ul li strong {
+                    font-size: 1.1rem;
+                    color: #28a745;
+                }
+
+        #tips .section-content p {
+            text-align: center;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+
+        /* Container chứa các liên kết */
+        .links-container {
+            display: flex;
+            flex-direction: column; /* Xếp các liên kết theo chiều dọc */
+            gap: 20px; /* Khoảng cách giữa các liên kết */
+            padding: 30px;
+            background-color: #ffffff; /* Màu nền trắng cho container */
+            border-radius: 12px; /* Bo góc mềm mại */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Bóng đổ nhẹ tạo chiều sâu */
+            max-width: 650px; /* Giới hạn độ rộng của container */
+            margin: 30px auto; /* Căn giữa container */
+            border: 1px solid #e0e0e0; /* Đường viền nhẹ bao quanh */
+        }
+
+            /* Phong cách cho các liên kết */
+            .links-container a {
+                text-decoration: none; /* Xóa gạch dưới */
+                color: #007bff; /* Màu xanh dương cho liên kết */
+                font-size: 1.2rem; /* Cỡ chữ dễ đọc và dễ nhìn */
+                font-weight: 600; /* Đậm hơn một chút */
+                line-height: 1.5; /* Tăng khoảng cách dòng để dễ đọc */
+                padding: 12px 20px;
+                border-radius: 6px; /* Bo góc nhẹ cho các liên kết */
+                transition: all 0.3s ease; /* Tạo hiệu ứng chuyển động mượt mà */
+                background-color: #f0f8ff; /* Nền nhẹ cho các liên kết */
+                border: 2px solid transparent; /* Thêm border mờ cho các liên kết */
+            }
+
+                /* Hiệu ứng hover */
+                .links-container a:hover {
+                    color: #ffffff; /* Màu chữ trắng khi hover */
+                    background-color: #007bff; /* Nền xanh dương khi hover */
+                    border-color: #007bff; /* Viền xanh dương khi hover */
+                    transform: translateY(-3px); /* Dịch chuyển nhẹ lên khi hover */
+                }
+
+                /* Hiệu ứng khi liên kết đang được chọn */
+                .links-container a:focus {
+                    outline: none; /* Xóa outline khi focus */
+                    border-color: #0056b3; /* Thêm viền màu xanh đậm khi focus */
+                    box-shadow: 0 0 8px rgba(0, 86, 179, 0.5); /* Hiệu ứng bóng khi focus */
+                }
+
+                .links-container .section-title {
+                    font-size: 1.6rem; /* Cỡ chữ vừa phải */
+                    font-weight: 700; /* Chữ đậm */
+                    color: #333; /* Màu chữ đậm */
+                    margin-bottom: 20px; /* Khoảng cách dưới tiêu đề */
+                    border-bottom: 3px solid #28a745; /* Đường viền dưới màu xanh lá */
+                    padding-bottom: 10px; /* Khoảng cách giữa chữ và đường viền */
+                }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Trang chủ</a></li>
+                <li><a href="#courses">Khóa học</a></li>
+                <li><a href="#teachers">Giảng viên</a></li>
+                <li><a href="#contact">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="banner">
+            <img src="~/Images/ad.jpg" alt="Trung tâm Anh ngữ DAT">
+            <h1>Chào mừng bạn đến với Trung tâm Anh ngữ DAT</h1>
+            <p>Hãy cùng học tiếng Anh hiệu quả với các khóa học chất lượng cao tại DAT nhé. Tại đây, bạn có thể tham gia các khóa học tiếng Anh giao tiếp, luyện thi IELTS, TOEIC, và nhiều chương trình học phù hợp với nhu cầu và mục tiêu cá nhân.</p>
+            <a href="#courses" class="cta">Xem khóa học</a>
+        </section>
+
+        <section id="courses" class="intro">
+            <h2 class="section-title">Khóa học tại Trung tâm Anh ngữ DAT</h2>
+            <div class="section-content">
+                <p>Tại Trung tâm Anh ngữ DAT, chúng tôi cung cấp các khóa học tiếng Anh đa dạng, phù hợp với mọi lứa tuổi và trình độ. Các khóa học của chúng tôi được thiết kế với phương pháp giảng dạy hiện đại, giúp học viên đạt được kết quả nhanh chóng và hiệu quả nhất. Dưới đây là các khóa học nổi bật của chúng tôi:</p>
+                <ul>
+                    <li>
+                        <img src="~/Images/giaotiep.jpg" alt="Khóa học Tiếng Anh giao tiếp">
+                        <strong>Khóa học Tiếng Anh giao tiếp:</strong> Phát triển kỹ năng giao tiếp bằng tiếng Anh trong môi trường thực tế, phù hợp với học viên muốn nâng cao khả năng nghe và nói.
+                    </li>
+                    <li>
+                        <img src="~/Images/ielts.jpg" alt="Khóa luyện thi IELTS">
+                        <strong>Khóa luyện thi IELTS:</strong> Giúp học viên chuẩn bị tốt nhất cho kỳ thi IELTS, với lộ trình học bài bản và chuyên sâu từ đội ngũ giảng viên giàu kinh nghiệm.
+                    </li>
+                    <li>
+                        <img src="~/Images/toeic.png" alt="Khóa luyện thi TOEIC">
+                        <strong>Khóa luyện thi TOEIC:</strong> Học viên sẽ được trang bị đầy đủ kiến thức và kỹ năng cần thiết để đạt điểm cao trong kỳ thi TOEIC.
+                    </li>
+                    <li>
+                        <img src="~/Images/online.png" alt="Khóa học trực tuyến">
+                        <strong>Khóa học trực tuyến:</strong> Học mọi lúc, mọi nơi qua các khóa học online được thiết kế linh hoạt và dễ tiếp cận.
+                    </li>
+                </ul>
+                <a href="#contact" class="cta">Đăng ký ngay</a>
+            </div>
+        </section>
+
+        <section id="teachers" class="intro">
+            <h2 class="section-title">Giảng viên tại Trung tâm Anh ngữ DAT</h2>
+            <div class="section-content">
+                <p>Đội ngũ giảng viên của Trung tâm Anh ngữ DAT là những chuyên gia hàng đầu trong lĩnh vực giảng dạy tiếng Anh. Với nhiều năm kinh nghiệm, giảng viên của chúng tôi sẽ giúp bạn cải thiện kỹ năng tiếng Anh nhanh chóng và hiệu quả.</p>
+                <p><strong>Những giảng viên của chúng tôi:</strong></p>
+                <ul>
+                    <li>
+                        <img src="~/Images/giangvien1.jpg" alt="Giảng viên 1">
+                        <strong>Ms. Hanh</strong>
+                    </li>
+                    <li>
+                        <img src="~/Images/giangvien2.jpg" alt="Giảng viên 2">
+                        <strong>Mr. John</strong>
+                    </li>
+                    <li>
+                        <img src="~/Images/giangvien3.png" alt="Giảng viên 3">
+                        <strong>Ms. Phuong</strong>
+                    </li>
+                </ul>
+                <p>Hãy gặp gỡ đội ngũ giảng viên của chúng tôi và bắt đầu hành trình học tiếng Anh ngay hôm nay!</p>
+            </div>
+        </section>
+
+        <section id="tips" class="intro">
+            <h2 class="section-title">Mẹo học tiếng Anh hiệu quả</h2>
+            <div class="section-content">
+                <p>Hãy tham khảo những mẹo học tiếng Anh dưới đây để cải thiện khả năng của bạn nhanh chóng và hiệu quả hơn!</p>
+                <ul>
+                    <li>
+                        <img src="~/Images/docsach.jpg" alt="Đọc sách tiếng Anh" class="tip-image">
+                        <strong>Đọc sách và báo tiếng Anh mỗi ngày</strong>
+                    </li>
+                    <li>
+                        <img src="~/Images/nghenhac.jpg" alt="Nghe nhạc tiếng Anh" class="tip-image">
+                        <strong>Nghe nhạc hoặc xem phim tiếng Anh</strong>
+                    </li>
+                    <li>
+                        <img src="~/Images/noichuyen.jpg" alt="Nói tiếng Anh với bạn bè" class="tip-image">
+                        <strong>Thực hành nói tiếng Anh với bạn bè</strong>
+                    </li>
+                    <li>
+                        <img src="~/Images/useapp.jpg" alt="Sử dụng ứng dụng học tiếng Anh" class="tip-image">
+                        <strong>Sử dụng ứng dụng học tiếng Anh</strong>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <div class="links-container">
+                <p class="section-title">Thông tin</p>
+                <a href="https://tuoitre.vn/tieng-anh-la-ngon-ngu-thu-hai-trong-truong-hoc-tim-loi-giai-cho-nhung-thach-thuc-20241002080832712.htm" target="_blank">Tiếng Anh là ngôn ngữ thứ 2 ở trường học</a>
+                <a href="https://vn.elsaspeak.com/cach-hoc-thuoc-tieng-anh-nhanh-nhat/?srsltid=AfmBOooIFJNWuyQ-QM2_grt3w7UYo5cIDTLlC4QEIM7xD8eS2T9jZeif" target="_blank">Cách học thuộc tiếng Anh nhanh nhất</a>
+                <a href="https://vnexpress.net/10-ly-do-ban-can-hoc-tieng-anh-3272046.html" target="_blank">10 lý do bạn cần học tiếng Anh</a>
+                <a href="https://www.hutech.edu.vn/quocte/tin-tuc/hoat-dong-su-kien/14586554-19-loi-the-ban-co-duoc-khi-gioi-tieng-anh" target="_blank">19 lợi thế khi giỏi tiếng Anh</a>
+            </div>
+        </section>
+
+        <section id="contact" class="intro">
+            <h2 class="section-title">Liên hệ với chúng tôi</h2>
+            <div class="section-content">
+                <p>Để biết thêm thông tin chi tiết về các khóa học và dịch vụ của Trung tâm Anh ngữ DAT, vui lòng liên hệ với chúng tôi qua các phương thức dưới đây:</p>
+                <ul>
+                    <li><strong>Địa chỉ:</strong> 7 Đường số 5, KDC Vạn Phúc, Thành phố Thủ Đức</li>
+                    <li><strong>Email:</strong>tiendattanthang@gmail.com</li>
+                    <li><strong>Điện thoại:</strong> 0924246896</li>
+                    <li><strong>Giờ làm việc:</strong> Thứ 2 - Thứ 7, từ 8:00 AM đến 6:00 PM</li>
+                </ul>
+                <p>Chúng tôi rất mong được gặp bạn và giúp bạn đạt được mục tiêu học tiếng Anh của mình!</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Trung tâm Anh ngữ DAT - Học tiếng Anh cùng đội ngũ giảng viên chuyên nghiệp</p>
+    </footer>
+</body>
+</html>
