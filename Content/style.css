@@ -1,0 +1,193 @@
+﻿/* Tổng quan */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #343a40;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+    a:hover {
+        color: #0056b3;
+        text-decoration: underline;
+    }
+
+/* Header */
+header {
+    background-color: #343a40;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+    header nav ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+    }
+
+        header nav ul li {
+            margin: 0 20px;
+        }
+
+            header nav ul li a {
+                color: white;
+                font-size: 1.3rem;
+                font-weight: bold;
+                transition: color 0.3s ease;
+            }
+
+                header nav ul li a:hover {
+                    color: #28a745;
+                }
+
+/* Banner */
+.banner {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/banner.jpg') no-repeat center center/cover;
+    color: white;
+}
+
+    .banner h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        font-family: 'Times New Roman', serif;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .banner p {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+        font-family: 'Times New Roman', serif;
+        font-weight: 400;
+    }
+
+    .banner .cta {
+        background-color: #28a745;
+        color: white;
+        padding: 15px 30px;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        font-family: 'Times New Roman', serif;
+        transition: background-color 0.3s ease;
+    }
+
+        .banner .cta:hover {
+            background-color: #218838;
+        }
+
+/* Mục chính */
+main {
+    padding: 50px 15px;
+}
+
+    main h1,
+    main h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+        font-family: 'Times New Roman', serif;
+    }
+
+    main ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+        main ul li {
+            width: 30%;
+            margin: 15px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+            main ul li:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            }
+
+            main ul li img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+                display: block;
+            }
+
+            main ul li h3 {
+                font-size: 1.7rem;
+                margin: 20px;
+                font-family: 'Times New Roman', serif;
+                color: #343a40;
+            }
+
+            main ul li p {
+                margin: 0 20px 20px;
+                font-size: 1.1rem;
+                color: #6c757d;
+                font-family: 'Times New Roman', serif;
+            }
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+    font-family: 'Times New Roman', serif;
+}
+
+    footer p {
+        font-size: 1rem;
+        margin: 0;
+    }
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+    }
+
+        header nav ul li {
+            margin: 10px 0;
+        }
+
+    .banner h1 {
+        font-size: 2.5rem;
+    }
+
+    .banner p {
+        font-size: 1.1rem;
+    }
+
+    main ul li {
+        width: 100%;
+    }
+
+    main h1,
+    main h2 {
+        font-size: 2rem;
+    }
+}
